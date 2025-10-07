@@ -15,5 +15,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require-dev": {
+        "phpstan/phpstan": "2.1.x-dev"
+    }
 }

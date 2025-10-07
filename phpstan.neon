@@ -1,0 +1,11 @@
+parameters:
+	level: 9
+	paths:
+		- src
+		- tests
+    bootstrapFiles:
+		- phpstan-bootstrap.php
+    disallowedFunctionCalls:
+        -
+            function: 'dd()'
+            'message: 'You probably did not mean to commit code with dd in it'
