@@ -14,8 +14,13 @@
             "email": "37352340+guccilive@users.noreply.github.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.3.0"
+    },
     "require-dev": {
-        "phpstan/phpstan": "2.1.x-dev"
+        "phpstan/phpstan": "2.1.x-dev",
+         "squizlabs/php_codesniffer": "^4.0"
     }
 }
