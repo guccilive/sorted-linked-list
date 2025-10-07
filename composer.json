@@ -8,6 +8,11 @@
             "Guccilive\\SortedLinkedList\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Guccilive\\SortedLinkedList\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Heritier Mashini",
@@ -21,6 +26,12 @@
     },
     "require-dev": {
         "phpstan/phpstan": "2.1.x-dev",
-         "squizlabs/php_codesniffer": "^4.0"
+         "squizlabs/php_codesniffer": "^4.0",
+        "phpunit/phpunit": "^12.4"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --stop-on-failure --order-by=defects",
+        "cs": "vendor/bin/phpcs --standard=PSR12 src tests",
+        "phpstan": "vendor/bin/phpstan analyse"
     }
 }
