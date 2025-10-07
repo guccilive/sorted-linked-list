@@ -91,11 +91,11 @@ final class SortedLinkedList implements SortedLinkedListInterface
         if ($this->head->value === $value) {
             $this->head = $this->head->next;
             $this->count = max(0, $this->count - 1);
-            
+
             if ($this->head === null) {
                 $this->valueType = null;
             }
-            
+
             return true;
         }
 
