@@ -245,7 +245,7 @@ class SortedLinkedListTest extends TestCase
 
         $this->expectException(TypeMismatchException::class);
         $this->expectExceptionMessage('List contains int values, but received string');
-        
+
         $this->list->insert('string');
     }
 
@@ -255,7 +255,7 @@ class SortedLinkedListTest extends TestCase
 
         $this->expectException(TypeMismatchException::class);
         $this->expectExceptionMessage('List contains string values, but received int');
-        
+
         $this->list->insert(42);
     }
 

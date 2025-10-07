@@ -30,7 +30,7 @@ final class TypeMismatchException extends InvalidArgumentException
     public static function unsupportedType(mixed $value): self
     {
         $type = get_debug_type($value);
-        
+
         return new self(
             sprintf(
                 'Unsupported type: %s. Only int and string types are supported.',

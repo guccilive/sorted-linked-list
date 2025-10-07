@@ -21,18 +21,15 @@ interface SortedLinkedListInterface extends Countable, IteratorAggregate
 
     /**
      * @param T $value
-     * @return bool
      */
     public function contains(int|string $value): bool;
 
     /**
      * @param T $value
-     * @return bool
      */
     public function remove(int|string $value): bool;
 
     /**
-     * @param int $index
      * @return T value at the specified position
      * @throws \OutOfBoundsException
      */
