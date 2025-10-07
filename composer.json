@@ -1,0 +1,19 @@
+{
+    "name": "guccilive/sorted-linked-list",
+    "description": "A type-safe, high-performance sorted linked list implementation for PHP",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Guccilive\\SortedLinkedList\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Heritier Mashini",
+            "email": "37352340+guccilive@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
