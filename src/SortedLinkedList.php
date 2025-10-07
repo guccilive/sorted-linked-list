@@ -19,6 +19,9 @@ final class SortedLinkedList implements SortedLinkedListInterface
      */
     private ?ListNode $head = null;
 
+    /**
+     * @var int<0, max>
+     */
     private int $count = 0;
 
     private ?string $valueType = null;
@@ -46,7 +49,7 @@ final class SortedLinkedList implements SortedLinkedListInterface
         }
 
         $current = $this->head;
-        while ($current->hasNext() && $current->next->value < $value) {
+        while ($current->next !== null && $current->next->value < $value) {
             $current = $current->next;
         }
 
@@ -87,7 +90,7 @@ final class SortedLinkedList implements SortedLinkedListInterface
 
         if ($this->head->value === $value) {
             $this->head = $this->head->next;
-            $this->count--;
+            $this->count = max(0, $this->count - 1);
             
             if ($this->head === null) {
                 $this->valueType = null;
@@ -97,14 +100,14 @@ final class SortedLinkedList implements SortedLinkedListInterface
         }
 
         $current = $this->head;
-        while ($current->hasNext()) {
+        while ($current->next !== null) {
             if ($current->next->value > $value) {
                 return false;
             }
 
             if ($current->next->value === $value) {
                 $current->next = $current->next->next;
-                $this->count--;
+                $this->count = max(0, $this->count - 1);
                 return true;
             }
 
@@ -175,6 +178,7 @@ final class SortedLinkedList implements SortedLinkedListInterface
 
     /**
      * @inheritDoc
+     * @return int<0, max>
      */
     public function count(): int
     {
