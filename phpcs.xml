@@ -38,27 +38,6 @@
     <!-- Require use of null coalesce operator when possible -->
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator"/>
     
-    <!-- Require use of null coalesce equal operator when possible -->
-    <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceEqualOperator"/>
-    
-    <!-- Useless parentheses -->
-    <rule ref="SlevomatCodingStandard.PHP.UselessParentheses"/>
-    
-    <!-- Useless semicolon -->
-    <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
-    
-    <!-- Dead code detection -->
-    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
-    <rule ref="SlevomatCodingStandard.Functions.UnusedParameter"/>
-    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable"/>
-    <rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
-    
-    <!-- Disallow empty statements -->
-    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowEmpty"/>
-    
-    <!-- Require combined assignment operators -->
-    <rule ref="SlevomatCodingStandard.Operators.RequireCombinedAssignmentOperator"/>
-    
     <!-- Yoda conditions -->
     <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
     
@@ -74,27 +53,10 @@
     <!-- Classes -->
     <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility"/>
     <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
-    <rule ref="SlevomatCodingStandard.Classes.TraitUseDeclaration"/>
-    <rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing"/>
     
     <!-- Comments -->
     <rule ref="SlevomatCodingStandard.Commenting.EmptyComment"/>
-    <rule ref="SlevomatCodingStandard.Commenting.UselessInheritDocComment"/>
-    
-    <!-- Functions -->
-    <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure"/>
-    <rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue"/>
     
     <!-- Arrays -->
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
-    
-    <!-- Exceptions -->
-    <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch"/>
-    
-    <!-- Complexity -->
-    <rule ref="SlevomatCodingStandard.Complexity.Cognitive">
-        <properties>
-            <property name="maxComplexity" value="10"/>
-        </properties>
-    </rule>
 </ruleset>
