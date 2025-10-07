@@ -1,11 +1,15 @@
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
 parameters:
-	level: 9
-	paths:
-		- src
-		- tests
+    level: max
+    paths:
+        - src
+        - tests
     bootstrapFiles:
-		- phpstan-bootstrap.php
-    disallowedFunctionCalls:
-        -
-            function: 'dd()'
-            'message: 'You probably did not mean to commit code with dd in it'
+        - phpstan-bootstrap.php
+    
+    # Report unmatched ignored errors
+    reportUnmatchedIgnoredErrors: true
+    treatPhpDocTypesAsCertain: false
+

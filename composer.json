@@ -27,11 +27,25 @@
     "require-dev": {
         "phpstan/phpstan": "2.1.x-dev",
          "squizlabs/php_codesniffer": "^4.0",
-        "phpunit/phpunit": "^12.4"
+        "phpunit/phpunit": "^12.4",
+        "slevomat/coding-standard": "^8.24"
     },
     "scripts": {
-        "test": "vendor/bin/phpunit --stop-on-failure --order-by=defects",
-        "cs": "vendor/bin/phpcs --standard=PSR12 src tests",
-        "phpstan": "vendor/bin/phpstan analyse"
+        "test": "phpunit",
+        "test:coverage": "phpunit --configuration phpunit-coverage.xml --coverage-html coverage",
+        "test:coverage-text": "phpunit --configuration phpunit-coverage.xml --coverage-text",
+        "phpstan": "phpstan analyse --memory-limit=1G",
+        "cs": "phpcs",
+        "cs:fix": "phpcbf",
+        "check": [
+            "@test",
+            "@phpstan",
+            "@cs"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": false
+        }
     }
 }
